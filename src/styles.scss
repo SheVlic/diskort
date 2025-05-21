@@ -1,0 +1,32 @@
+app-root, body, html{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    // justify-content: center;
+    // align-items: center;
+}
+body{
+    color: #f2f3fc;
+    margin: 0;
+    font-family: "Segoe UI", Georgia, Serif; 
+    background-color:#121214;
+}
+
+
+.primary-button {
+    font-size: 18px;
+    width: 200px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    //box-shadow: 2px 2px 4px 2px #bde1eb;
+    border: none;
+    outline: none;
+    padding: 16px 17px;
+    transition: .5s;
+    background-color: #5865f2;
+    color: #f2f3fc;
+
+    &:hover {
+        background-color: #424cb6;
+    }
+}

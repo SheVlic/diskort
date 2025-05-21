@@ -1,0 +1,73 @@
+<!-- <div class="layout">
+  <div class="sidebar">
+    <button 
+      class="tab" 
+      [class.active]="currentTab === 'home'" 
+      (click)="switchTab('home')">Главная</button>
+
+    <button 
+      class="tab" 
+      [class.active]="currentTab === 'about'" 
+      (click)="switchTab('about')">О нас</button>
+
+    <button 
+      class="tab" 
+      [class.active]="currentTab === 'contact'" 
+      (click)="switchTab('contact')">Контакты</button>
+  </div>
+
+  <div class="content">
+    <div *ngIf="currentTab === 'home'">
+      <h1>Главная</h1>
+      <p>Добро пожаловать!</p>
+    </div>
+
+    <div *ngIf="currentTab === 'about'">
+      <h1>О нас</h1>
+      <p>Мы делаем классные вещи!</p>
+    </div>
+
+    <div *ngIf="currentTab === 'contact'">
+      <h1>Контакты</h1>
+      <p>Пишите нам на emai.com</p>
+    </div>
+  </div>
+</div> -->
+
+<div class="mainElement">
+    <div class="navPanel">
+        <button
+            class="primary-button"
+            [class.active]="XActiveButton === 'work1'"
+            (click)="switchX('work1')">Главная страница
+        </button>
+        
+        <button
+            class="primary-button"
+            [class.active]="XActiveButton === 'work2'"
+            (click)="switchX('work2')">О себе
+        </button>
+
+        <button
+            class="primary-button"
+            [class.active]="XActiveButton === 'work3'"
+            (click)="switchX('work3')">Контакты
+        </button> 
+    </div>
+
+
+    <div class="content">
+        <div *ngIf="XActiveButton === 'work1'">
+            <h1>Ведутся тектонические шоколадки</h1>
+            <h2>Приносим извинения!</h2>
+        </div>
+
+        <div *ngIf="XActiveButton === 'work2'">
+            <p>Тут фоточки и информация о себе в разработке :)</p>
+        </div>
+
+        <div *ngIf="XActiveButton === 'work3'">
+            <p>телефон :)</p>
+        </div>
+    </div>
+</div>
