@@ -37,15 +37,92 @@
 
 .mainElement{
     padding: 20px;
-    gap: 16px;
+    gap: 30px;
     display: flex;
     font-family: "Segoe UI", Georgia, Serif;
+	width:100%;
 }
 
-.navPanel{
+.sidebar{
     display: flex;
     flex-direction: column;
     gap: 16px;
+
 }
 
+.right-element {
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+	background-color: #202024;
+	border: 1px solid #36363b;
+	padding: 24px 16px;
+	border-radius: 16px;
+	width:100%;
+	//box-shadow: 0 2px 10px 4px #36363b;
+}
+.left-element{
+	border: 1px solid #36363b;
+	padding: 24px 16px;
+	border-radius: 16px;
+	background-color: #202024;
+	//box-shadow: 0 2px 10px 4px #36363b
+}
 
+header {
+    display: flex;
+	padding: 20px;
+	flex-direction: column;
+	
+	
+}
+
+h1 {
+	width: 100%;
+	text-align: center;
+}
+
+.divider {
+	border-radius: 10px;
+	width: 100%;
+	height: 8px;
+	background-color: #36363b;
+}
+
+.chat-container {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	width: 100%;
+	height: 100%;
+	justify-content: flex-end;
+}
+
+.chat-bubble {
+	background-color: #727be2;
+	width: fit-content;
+	padding: 7px 8px;
+	box-sizing: border-box;
+	border-radius: 12px
+}
+
+.message-input-container {
+	display: flex;
+	box-sizing: border-box;
+	gap: 16px;
+	margin-top: 20px;
+	border-top: 2px solid #36363b;
+	padding: 24px 16px;
+	//border-radius: 16px;
+}
+.send-button {
+	width: 64px;
+	height: 54px;
+}
+
+textarea {
+	width: 100%;
+	resize: none;
+	height: 100%;
+	
+}
