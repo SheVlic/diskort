@@ -45,22 +45,13 @@
 
     <div class="sidebar">
         <button
+            *ngFor="let contact of contacts"
             class="primary-button"
-            [class.active]="XActiveButton === 'work1'"
-            (click)="switchX('work1')">юзер 1
+            [class.active]="isActive(contact.name)"
+            (click)="setChat(contact.name)"
+            >
+            {{ contact.name }}
         </button>
-        
-        <button
-            class="primary-button"
-            [class.active]="XActiveButton === 'work2'"
-            (click)="switchX('work2')">юзер 2
-        </button>
-
-        <button
-            class="primary-button"
-            [class.active]="XActiveButton === 'work3'"
-            (click)="switchX('work3')">юзер 3
-        </button> 
     </div>
 
   </div>
@@ -68,43 +59,25 @@
 
     <div class="right-element">
         <header>
-            <h2>юзеры ыыы</h2>
+            <h2>{{activeContactName}}</h2>
 			<div class="divider"></div>
         </header>
 
         <div class="chat-container">
-            <div class="chat-bubble">
-              <p>Ведутся тектонические шоколадки</p>
-            </div>
-            <div class="chat-bubble">
-              <p>Ведектонические шоколадки</p>
-            </div>
-            <div class="chat-bubble">
-              <p>Ведутся тектоничладки</p>
-            </div>
-            <div class="chat-bubble">
-            	<p>Ведутся  шоколаfsfsDFHKGSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSдки</p>
-            </div>
-            <div class="chat-bubble">
-              <p>Ведутся тектонические</p>
-            </div>
-            <div class="chat-bubble">
-              <p> шоколадки</p>
-            </div>
-			<div class="chat-bubble">
-              <p> z rfsfsfsfколадки</p>
-            </div>
-			<div class="chat-bubble">
-              <p> шzgojrpgoang jsn ojgfnhaijo ag gasdf и</p>
-            </div>
-			<div class="chat-bubble">
-              <p> fzsfsfsfsfsfsfsfsfsfsfsfsfsfsfsf34234144ки</p>
+            <div
+                *ngFor="let message of getFilterMessages()"
+                class="chat-bubble"
+				[class.right-bubble]="message.from === 'me'"
+				>
+				{{message.text}}
             </div>
         </div>
 
         <div class="message-input-container">
-            <textarea class="primary-input" placeholder="Напишите сообщение"></textarea>
-            <button class="primary-button send-button">
+            <textarea id="message-input" class="primary-input" placeholder="Напишите сообщение"></textarea>
+            <button class="primary-button send-button"
+				(click)= "sendMessage()"
+			>
 				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
      				stroke-linecap="round" stroke-linejoin="round" class="feather feather-send">
   					<line x1="22" y1="2" x2="11" y2="13" />
