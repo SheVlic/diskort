@@ -12,7 +12,7 @@ body{
     background-color:#121214;
 }
 
-.primary-input {
+.primary-input, .primary-select {
         font-family: "Segoe UI", Georgia, Serif;
         color: #f2f3fc;
         width: auto;
@@ -23,7 +23,6 @@ body{
         border: 1px solid #36363b;
         outline: none;
         padding: 7px 8px;
-        margin: 10px;
         transition: .5s;
         background-color: #1d1d21;
 
@@ -46,7 +45,6 @@ body{
     border: none;
     outline: none;
     padding: 16px 17px;
-    margin: 10px;
     transition: .5s;
     background-color: #5865f2;
     color: #f2f3fc;
@@ -77,9 +75,7 @@ p {
 .label-input-container {
     display: flex;
     flex-direction: column;
-    border-radius: 10px;
-    border: 2px solid #505057;
-    
+        
     label {
         font-weight: 500;
         font-family: "Segoe UI", Georgia, Serif;
@@ -87,4 +83,28 @@ p {
         margin: 10px;
         
     }
+}
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #8cb0e0;
+    border-radius: 4px;
+}
+
+.primary-select {
+    width: 140px;
+    text-align: center;
+}
+
+.primary-pannel {
+    border-radius: 64px;
+    border: 2px solid #505057;
+	background-color: #36363b;
+    box-sizing: border-box;
+    display: flex;
+    
+    width:fit-content;
+    height: fit-content;
+    padding: 64px;
 }

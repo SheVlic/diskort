@@ -6,20 +6,6 @@
     align-items: center;
 }
 
-.main-container {
-    border-radius: 64px;
-    border: 2px solid #505057;
-	background-color: #36363b;
-    box-sizing: border-box;
-    display: flex;
-    width:fit-content;
-    height: fit-content;
-    padding: 64px;
-        button {
-    
-        }
-   
-}
 
 .photo-container {
     display: flex;
@@ -49,7 +35,8 @@
 }
 
 .label-input-container {
-    
+    border-radius: 10px;
+    border: 2px solid #505057;
     input {
         display: flex;
         box-sizing: border-box;
