@@ -1,0 +1,91 @@
+<!-- <div class="layout">
+  <div class="sidebar">
+    <button 
+      class="tab" 
+      [class.active]="currentTab === 'home'" 
+      (click)="switchTab('home')">Главная</button>
+
+    <button 
+      class="tab" 
+      [class.active]="currentTab === 'about'" 
+      (click)="switchTab('about')">О нас</button>
+
+    <button 
+      class="tab" 
+      [class.active]="currentTab === 'contact'" 
+      (click)="switchTab('contact')">Контакты</button>
+  </div>
+
+  <div class="content">
+    <div *ngIf="currentTab === 'home'">
+      <h1>Главная</h1>
+      <p>Добро пожаловать!</p>
+    </div>
+
+    <div *ngIf="currentTab === 'about'">
+      <h1>О нас</h1>
+      <p>Мы делаем классные вещи!</p>
+    </div>
+
+    <div *ngIf="currentTab === 'contact'">
+      <h1>Контакты</h1>
+      <p>Пишите нам на emai.com</p>
+    </div>
+  </div>
+</div> -->
+
+<div class="mainElement">
+  <div class="left-element">
+
+    <header>
+        <h1>Gramm</h1>
+        <div class="divider"></div><!--разделитель -->
+    </header>
+    
+
+    <div class="sidebar">
+        <button
+            *ngFor="let contact of contacts"
+            class="primary-button"
+            [class.active]="isActive(contact.name)"
+            (click)="setChat(contact.name)"
+            >
+            {{ contact.name }}
+        </button>
+    </div>
+
+  </div>
+   
+
+    <div class="right-element">
+        <header>
+            <h2>{{activeContactName}}</h2>
+			<div class="divider"></div>
+        </header>
+
+        <div class="chat-container">
+            <div
+                *ngFor="let message of getFilterMessages()"
+                class="chat-bubble"
+				[class.right-bubble]="message.from === 'me'"
+				>
+				{{message.text}}
+            </div>
+        </div>
+
+        <div class="message-input-container">
+            <textarea id="message-input" class="primary-input" placeholder="Напишите сообщение"></textarea>
+            <button class="primary-button send-button"
+				(click)= "sendMessage()"
+			>
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+     				stroke-linecap="round" stroke-linejoin="round" class="feather feather-send">
+  					<line x1="22" y1="2" x2="11" y2="13" />
+  					<polygon points="22 2 15 22 11 13 2 9 22 2" />
+
+				</svg>
+			</button>
+        </div>
+    </div>
+</div>
+

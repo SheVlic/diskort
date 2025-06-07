@@ -15,36 +15,38 @@ body{
 .primary-input {
         font-family: "Segoe UI", Georgia, Serif;
         color: #f2f3fc;
-        width: 320px;
+        width: auto;
         height: 48px;
         box-sizing: border-box;
         font-size: 18px;
-        border-radius: 8px;
+        border-radius: 10px;
         border: 1px solid #36363b;
         outline: none;
         padding: 7px 8px;
+        margin: 10px;
         transition: .5s;
         background-color: #1d1d21;
 
         &:hover {
-            border: 1px solid #8cb0e0
+            border: 1px solid #5865f2
         }
 
         &:focus {
-            border: 1px solid #5865f2
+            border: 1px solid #8cb0e0
         }
     }
 
 .primary-button {
     font-family: "Segoe UI", Georgia, Serif;
     font-size: 18px;
+    font-weight: 500;
     width: 200px;
-    border-radius: 20px;
+    border-radius: 10px;
     box-sizing: border-box;
-    //box-shadow: 2px 2px 4px 2px #bde1eb;
     border: none;
     outline: none;
     padding: 16px 17px;
+    margin: 10px;
     transition: .5s;
     background-color: #5865f2;
     color: #f2f3fc;
@@ -60,6 +62,29 @@ h1, h2 {
     margin-bottom: 16px;
 }
 
-p{
+p {
 	margin: 0;
+}
+
+.col {
+    flex-direction: column;
+}
+
+.flex {
+    display: flex;
+}
+
+.label-input-container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    border: 2px solid #505057;
+    
+    label {
+        font-weight: 500;
+        font-family: "Segoe UI", Georgia, Serif;
+        font-size: 18px;
+        margin: 10px;
+        
+    }
 }

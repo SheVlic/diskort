@@ -1,0 +1,36 @@
+<section class="main-container flex col">
+	<div class="photo-container">
+        <img class="photo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnOxCvrvvQmihwCtZfWt3wsMHsXuP_I2iVEg&s"/>
+        
+        <div class="user-save-information">
+            <button class="primary-button">
+                {{ userInformation }}
+            </button>
+
+        </div>
+
+        <button class="primary-button">Cменить фото</button>
+	</div>
+
+	<section class="user-information-container flex col">     
+		    <div class="label-input-container">
+                <label>Имя пользователя</label>
+		        <input class="primary-input"  id="input-user-name">
+            </div>
+
+            <div class="label-input-container">
+                <label>Никнейм</label>
+                <input class="primary-input" id="input-user-nickname">
+            </div>
+
+            <div> 
+                <button class="primary-button">Отмена</button>     
+                <button class="primary-button"
+                (click)="saveNameNickname()"
+                >Сохранить</button>
+            </div>
+           
+
+	</section>
+
+</section>
