@@ -1,45 +1,45 @@
 <section class="main-block primary-pannel">
     <h2>Создать учетную запись</h2>
-    <form class="registration-form-container">
+    <section class="registration-form-container">
         <div class="label-input-container">
             <label>E-mail</label>
-		    <input class="primary-input" required id="input-email">
+		    <input class="primary-input" required [formControl]="emailControl">
         </div>
         <div class="label-input-container">
             <label>Имя пользователя</label>
-		    <input class="primary-input" required id="input-name">
+		    <input class="primary-input" required [formControl]="nameControl">
         </div>
         <div class="label-input-container">
             <label>Никнейм</label>
-		    <input class="primary-input" required id="input-nickname">
+		    <input class="primary-input" required [formControl]="nicknameControl">
         </div>
         <div class="label-input-container">
             <label>Пароль</label>
-		    <input class="primary-input" required type="password" id="input-password">
+		    <input class="primary-input" required type="password" [formControl]="passwordControl">
         </div>
         <div class="label-input-container">
             <label>Подтвердите пароль</label>
-		    <input class="primary-input" required type="password" id="input-password-confirm">
+		    <input class="primary-input" required type="password" [formControl]="passwordConfirmControl">
         </div>
         <div class="label-input-container">
             <label>Дата рождения</label>
             <div class="date-wrapper">
-		        <select class="primary-select">
-                    <option *ngFor="let day of days">{{ day }}</option>
+		        <select class="primary-select" [formControl]="birthDayControl">
+                    <option *ngFor="let day of days" [value]="day">{{ day }}</option>
                 </select>
-                <select class="primary-select">
-                    <option *ngFor="let month of months">{{ month }}</option>
+                <select class="primary-select" [formControl]="birthMonthControl">
+                    <option *ngFor="let month of months" [value]="month">{{ month }}</option>
                 </select>
-                <select class="primary-select">
-                    <option *ngFor="let year of years">{{ year }}</option>
+                <select class="primary-select" [formControl]="birthYearControl">
+                    <option *ngFor="let year of years" [value]="year">{{ year }}</option>
                 </select>
 
             </div>
         </div>
-        <button class="primary-button">Зарегистрироваться</button>
+        <button class="primary-button" (click)="register()">Зарегистрироваться</button>
 
 
 
-    </form>
+    </section>
     
 </section>
