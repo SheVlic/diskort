@@ -1,0 +1,16 @@
+<section class="main-block primary-pannel">
+    <h2>Вход в учетную запись</h2>
+    <section class="registration-form-container">
+        <div class="label-input-container">
+            <!-- <label>E-mail</label> -->
+		    <input class="primary-input" placeholder="E-mail" required [formControl]="emailControl">
+        </div>
+        <div class="label-input-container">
+            <!-- <label>Пароль</label> -->
+		    <input class="primary-input" placeholder="Пароль" required type="password" [formControl]="passwordControl">
+        </div>
+        <div class="error-message" *ngIf="invalidLogin">Неверно введен Email или пassворд</div>
+        <button class="primary-button" (click)="login()">Войти</button>
+        <button class="primary-button" (click)="navigateRegister()">Зарегистрироваться</button>
+    </section>
+</section>

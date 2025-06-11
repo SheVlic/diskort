@@ -42,6 +42,7 @@ body{
     width: 200px;
     border-radius: 10px;
     box-sizing: border-box;
+    cursor: pointer;
     border: none;
     outline: none;
     padding: 16px 17px;
@@ -95,6 +96,10 @@ p {
 .primary-select {
     width: 140px;
     text-align: center;
+    -moz-appearance: none; 
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
 }
 
 .primary-pannel {

@@ -1,12 +1,10 @@
 import { CommonModule } from "@angular/common";
 import { Component } from "@angular/core";
-import { ChatComponent } from "./chat/chat.component";
-import { UserProfileComponent } from "./user-profile/user-profile.component";
-import { RegisterComponent } from "./register/register.component";
+import { RouterOutlet } from "@angular/router";
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, ChatComponent, UserProfileComponent, RegisterComponent],
+  imports: [CommonModule, RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
  }) 
