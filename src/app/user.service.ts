@@ -6,6 +6,6 @@ import { User } from './model/user';
 })
 export class UserService {
     public user?: User;
-
+    public users: User[] = [];
   constructor() { }
 }

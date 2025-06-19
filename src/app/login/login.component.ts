@@ -18,11 +18,16 @@ export class LoginComponent {
 	public invalidLogin: boolean = false;
 
 	public login(): void{
-		if (this.userService.user?.email != this.emailControl.value || this.userService.user?.password != this.passwordControl.value) {
-			this.invalidLogin = true; 
+		this.router.navigateByUrl("chat"); //TODO: delete
+		const loginUser = this.userService.users.find((localUser) => localUser.email === this.emailControl.value && localUser.password === this.passwordControl.value);
+		if (loginUser) {
+			this.userService.user = loginUser;
+			this.router.navigateByUrl("chat");
 			return;
 		};
-		this.router.navigateByUrl("user-profile");
+		this.invalidLogin = true;
+
+		
 	};
 
 	public navigateRegister(): void{

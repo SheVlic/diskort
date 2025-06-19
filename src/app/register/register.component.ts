@@ -60,13 +60,14 @@ export class RegisterComponent {
 		) return;
 		const date: Date = new Date(this.formGroup.get("birthDay")?.value, this.months.indexOf(this.formGroup.get("birtMonth")?.value), this.formGroup.get("birthYear")?.value);
 		const newUser: User = {
+			id: 1,
 			email: this.formGroup.get("email")?.value,
 			name: this.formGroup.get("name")?.value,
 			nickname: this.formGroup.get("nickname")?.value,
 			password: this.formGroup.get("password")?.value,
 			birthDate: date
 		};
-		this.userService.user =  newUser;
+		this.userService.users.push(newUser);
 		console.log(newUser);
 		this.router.navigateByUrl("");
 	}

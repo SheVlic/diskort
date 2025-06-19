@@ -1,41 +1,5 @@
-<!-- <div class="layout">
-  <div class="sidebar">
-    <button 
-      class="tab" 
-      [class.active]="currentTab === 'home'" 
-      (click)="switchTab('home')">Главная</button>
-
-    <button 
-      class="tab" 
-      [class.active]="currentTab === 'about'" 
-      (click)="switchTab('about')">О нас</button>
-
-    <button 
-      class="tab" 
-      [class.active]="currentTab === 'contact'" 
-      (click)="switchTab('contact')">Контакты</button>
-  </div>
-
-  <div class="content">
-    <div *ngIf="currentTab === 'home'">
-      <h1>Главная</h1>
-      <p>Добро пожаловать!</p>
-    </div>
-
-    <div *ngIf="currentTab === 'about'">
-      <h1>О нас</h1>
-      <p>Мы делаем классные вещи!</p>
-    </div>
-
-    <div *ngIf="currentTab === 'contact'">
-      <h1>Контакты</h1>
-      <p>Пишите нам на emai.com</p>
-    </div>
-  </div>
-</div> -->
-
 <div class="mainElement">
-  <div class="left-element">
+  <div class="left-element primary-pannel">
 
     <header>
         <h1>Gramm</h1>
@@ -57,7 +21,7 @@
   </div>
    
 
-    <div class="right-element">
+    <div class="right-element primary-pannel">
         <header>
             <h2>{{activeContactName}}</h2>
 			<div class="divider"></div>
@@ -67,7 +31,7 @@
             <div
                 *ngFor="let message of getFilterMessages()"
                 class="chat-bubble"
-				[class.right-bubble]="message.from === 'me'"
+				[class.right-bubble]="message.sender?.name === userService.user?.name"
 				>
 				{{message.text}}
             </div>
